@@ -1,0 +1,6 @@
+{
+  "name": "BalasUlasan - AI Review Auto-Reply & Reputation Manager",
+  "description": "Platform AI pintar untuk membalas ulasan Google Bisnisku dan Google Maps secara otomatis, profesional, personal, dan multilingual. Tingkatkan CSAT dan reputasi bisnis Anda.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
