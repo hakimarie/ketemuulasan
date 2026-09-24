@@ -17,7 +17,7 @@ export const FaqSection: React.FC = () => {
             <HelpCircle className="w-3.5 h-3.5 text-slate-600" />
             Pusat Bantuan & Tanya Jawab
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Pertanyaan yang Sering Diajukan (FAQ)
           </h2>
           <p className="mt-2 text-slate-600 text-sm sm:text-base">
@@ -39,7 +39,7 @@ export const FaqSection: React.FC = () => {
                   onClick={() => toggleAccordion(idx)}
                   className="w-full text-left p-5 flex items-center justify-between gap-4 bg-white hover:bg-slate-50 transition-colors"
                 >
-                  <span className="font-bold text-slate-900 text-sm sm:text-base">
+                  <span className="font-bold text-[#0F172A] text-sm sm:text-base">
                     {faq.question}
                   </span>
                   <span className="p-1 rounded-lg bg-slate-100 text-slate-600 shrink-0">
@@ -58,11 +58,11 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* WhatsApp support banner */}
-        <div className="mt-10 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-2">
-          <h4 className="font-extrabold text-emerald-900 text-sm sm:text-base">
+        <div className="mt-10 bg-[#EFF6FF] border border-[#BFDBFE] rounded-2xl p-6 text-center space-y-2">
+          <h4 className="font-extrabold text-blue-900 text-sm sm:text-base">
             Punya Pertanyaan Khusus untuk Bisnis atau Cabang Anda?
           </h4>
-          <p className="text-xs text-emerald-700 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs text-[#2563EB] max-w-lg mx-auto leading-relaxed">
             Tim konsultan reputasi KetemuReview siap membantu Anda mengatur integrasi Google Profil Bisnis via WhatsApp live.
           </p>
           <div className="pt-2">
@@ -70,7 +70,7 @@ export const FaqSection: React.FC = () => {
               href="https://wa.me/6281200000000?text=Halo%20KetemuReview,%20saya%20ingin%20tanya%20seputar%20integrasi%20Google%20Review"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-xs shadow-sm transition-all"
             >
               💬 Chat dengan Tim KetemuReview via WhatsApp
             </a>
