@@ -49,7 +49,7 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    const systemInstruction = `Anda adalah asisten AI profesional untuk BalasUlasan.com, platform manajemen reputasi & auto-reply ulasan Google Bisnisku terdepan di Indonesia. Buat 3 opsi balasan ulasan terstruktur dalam JSON.`;
+    const systemInstruction = `Anda adalah asisten AI profesional untuk KetemuReview, platform manajemen reputasi & auto-reply ulasan Google Bisnisku terdepan di Indonesia. Buat 3 opsi balasan ulasan terstruktur dalam JSON.`;
 
     const prompt = `Data Ulasan Google Maps:
 - Nama Bisnis: ${businessName}
