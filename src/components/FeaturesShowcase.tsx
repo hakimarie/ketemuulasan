@@ -62,7 +62,7 @@ export const FeaturesShowcase: React.FC = () => {
             Semua yang Anda Butuhkan untuk Menguasai Reputasi Bisnis
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
-            BalasUlasan dirancang khusus menjawab tantangan nyata para pemilik restoran, klinik, hotel, 
+            KetemuReview dirancang khusus menjawab tantangan nyata para pemilik restoran, klinik, hotel, 
             dan bisnis lokal di Indonesia dalam merawat ulasan pelanggan.
           </p>
         </div>
