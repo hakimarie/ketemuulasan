@@ -6,9 +6,10 @@ interface NavbarProps {
   setCurrentView: (view: 'landing' | 'dashboard') => void;
   activeSection: string;
   scrollToSection: (sectionId: string) => void;
+  onOpenLogin: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ setCurrentView, scrollToSection }) => {
+export const Navbar: React.FC<NavbarProps> = ({ setCurrentView, scrollToSection, onOpenLogin }) => {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentView, scrollToSection 
 
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setCurrentView('dashboard')}
+              onClick={onOpenLogin}
               className="text-xs font-semibold px-3.5 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-colors flex items-center gap-1.5"
             >
               <LogIn className="w-3.5 h-3.5" />
