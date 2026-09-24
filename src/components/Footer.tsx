@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
                 <MessageSquareQuote className="w-4 h-4" />
               </div>
               <span className="font-extrabold text-lg text-white tracking-tight">
-                Balas<span className="text-emerald-500">Ulasan</span>.com
+                Ketemu<span className="text-emerald-500">Review</span>
               </span>
             </div>
             <p className="text-slate-400 text-xs leading-relaxed">
