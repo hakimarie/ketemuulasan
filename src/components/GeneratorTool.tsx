@@ -419,7 +419,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                         <CheckCircle2 className="w-4 h-4" />
                       </span>
                       <div>
-                        <h4 className="font-bold text-sm text-slate-100">Analisis Sentimen BalasUlasan AI</h4>
+                        <h4 className="font-bold text-sm text-slate-100">Analisis Sentimen KetemuReview</h4>
                         <p className="text-[11px] text-slate-400">Deteksi otomatis konteks & emosi pelanggan</p>
                       </div>
                     </div>
