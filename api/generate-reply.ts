@@ -32,20 +32,24 @@ export default async function handler(req: any, res: any) {
     } = req.body || {};
 
     if (!ai) {
-      const fallbackReplies = generateSmartFallbackReplies({
-        businessName,
-        rating,
-        reviewText,
-        reviewerName,
-        tone,
-        language,
-        promotion,
-        contactResolution,
+      return res.status(500).json({
+        success: false,
+        error: 'GEMINI_API_KEY belum dikonfigurasi di environment server.',
       });
-      return res.status(200).json({
-        success: true,
-        source: 'smart-template-engine',
-        data: fallbackReplies,
+    }
+
+    if (!reviewText || !String(reviewText).trim()) {
+      return res.status(400).json({
+        success: false,
+        error: 'Isi ulasan wajib diisi.',
+      });
+    }
+
+    const numericRating = Number(rating);
+    if (!Number.isFinite(numericRating) || numericRating < 1 || numericRating > 5) {
+      return res.status(400).json({
+        success: false,
+        error: 'Rating harus berada di antara 1 sampai 5.',
       });
     }
 
@@ -111,32 +115,10 @@ ${contactResolution ? `- Kontak Resolusi: ${contactResolution}` : ''}`;
       data: parsedData,
     });
   } catch (error: any) {
-    const {
-      businessName = 'Bisnis Kami',
-      rating = 5,
-      reviewText = '',
-      reviewerName = 'Pelanggan',
-      tone = 'Ramah & Hangat',
-      language = 'Bahasa Indonesia',
-      promotion = '',
-      contactResolution = '',
-    } = req.body || {};
-
-    const fallback = generateSmartFallbackReplies({
-      businessName,
-      rating,
-      reviewText,
-      reviewerName,
-      tone,
-      language,
-      promotion,
-      contactResolution,
-    });
-
-    return res.status(200).json({
-      success: true,
-      source: 'smart-template-engine',
-      data: fallback,
+    console.error('KetemuReview AI error:', error);
+    return res.status(502).json({
+      success: false,
+      error: error?.message || 'Gagal menghubungi layanan AI.',
     });
   }
 }
