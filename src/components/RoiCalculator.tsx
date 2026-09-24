@@ -6,7 +6,7 @@ export const RoiCalculator: React.FC = () => {
 
   // Assumptions:
   // Average manual reply time: 6 minutes per review (reading, thinking, typing, checking)
-  // With BalasUlasan AI: 20 seconds (1-click approve / auto-pilot)
+  // With KetemuReview: 20 seconds (1-click approve / auto-pilot)
   // Time saved = monthlyReviews * (6 - 0.33) / 60 hours
   const hoursSaved = Math.round((monthlyReviews * 5.67) / 60);
   
