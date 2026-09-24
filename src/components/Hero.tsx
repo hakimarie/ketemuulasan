@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
-            Balas Ulasan Google Maps & Bisnis{' '}
+            Kelola & Balas Ulasan Google Maps & Bisnis{' '}
             <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 bg-clip-text text-transparent">
               10x Lebih Cepat
             </span>{' '}
@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
               className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 hover:shadow-emerald-600/40 transition-all flex items-center justify-center gap-2 group hover:-translate-y-0.5"
             >
               <Sparkles className="w-4 h-4 text-emerald-200 group-hover:rotate-12 transition-transform" />
-              Coba Live Generator Balasan (Gratis)
+              Coba Live Generator Reply (Gratis)
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
 
