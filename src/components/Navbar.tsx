@@ -11,7 +11,9 @@ import {
   Menu, 
   X,
   ExternalLink,
-  ChevronRight
+  ChevronRight,
+  LogIn,
+  Rocket
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -153,28 +155,22 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </nav>
 
-          {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Account CTAs */}
+          <div className="hidden sm:flex items-center gap-2">
             <button
-              onClick={() => {
-                if (currentView === 'dashboard') {
-                  setCurrentView('landing');
-                } else {
-                  setCurrentView('dashboard');
-                }
-              }}
-              className="text-xs font-semibold px-3 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-colors flex items-center gap-1.5"
+              onClick={() => handleNavClick('pricing')}
+              className="text-xs font-semibold px-3.5 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-colors flex items-center gap-1.5"
             >
-              <LayoutDashboard className="w-3.5 h-3.5" />
-              {currentView === 'dashboard' ? 'Lihat Landing Page' : 'Buka Dashboard Live'}
+              <LogIn className="w-3.5 h-3.5" />
+              Login
             </button>
 
             <button
-              onClick={() => handleNavClick('generator')}
-              className="text-xs font-semibold px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/30 transition-all flex items-center gap-1.5 hover:shadow-md hover:-translate-y-0.5"
+              onClick={() => handleNavClick('pricing')}
+              className="text-xs font-bold px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/30 transition-all flex items-center gap-1.5 hover:shadow-md hover:-translate-y-0.5"
             >
-              <Sparkles className="w-3.5 h-3.5" />
-              Coba Gratis AI
+              <Rocket className="w-3.5 h-3.5" />
+              Mulai Gratis 7 Hari
             </button>
           </div>
 
@@ -284,12 +280,18 @@ export const Navbar: React.FC<NavbarProps> = ({
             Pertanyaan Umum (FAQ)
           </button>
 
-          <div className="pt-3 border-t border-slate-100">
+          <div className="pt-3 border-t border-slate-100 space-y-2">
             <button
-              onClick={() => handleNavClick('generator')}
-              className="w-full py-2.5 rounded-lg bg-emerald-600 text-white font-semibold text-center text-sm shadow-sm flex items-center justify-center gap-2"
+              onClick={() => handleNavClick('pricing')}
+              className="w-full py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-center text-sm flex items-center justify-center gap-2"
             >
-              <Sparkles className="w-4 h-4" /> Coba Generator AI Sekarang
+              <LogIn className="w-4 h-4" /> Login
+            </button>
+            <button
+              onClick={() => handleNavClick('pricing')}
+              className="w-full py-2.5 rounded-lg bg-emerald-600 text-white font-bold text-center text-sm shadow-sm flex items-center justify-center gap-2"
+            >
+              <Rocket className="w-4 h-4" /> Mulai Gratis 7 Hari
             </button>
           </div>
         </div>
