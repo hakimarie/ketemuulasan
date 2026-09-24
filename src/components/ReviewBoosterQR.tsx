@@ -20,7 +20,7 @@ export const ReviewBoosterQR: React.FC = () => {
   const [shortUrl, setShortUrl] = useState('https://g.page/r/kopiruangsenja/review');
   const [promoOffer, setPromoOffer] = useState('Beri bintang 5 & tunjukkan ke kasir untuk Gratis 1 Cup Ice Lemon Tea!');
   const [tableNumber, setTableNumber] = useState('Meja 08');
-  const [themeColor, setThemeColor] = useState<'blue' | 'blue' | 'green'>('blue');
+  const [themeColor, setThemeColor] = useState<'blue' | 'green'>('blue');
   const [copied, setCopied] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState('');
   const [qrError, setQrError] = useState('');
@@ -147,12 +147,6 @@ export const ReviewBoosterQR: React.FC = () => {
                       themeColor === 'blue' ? 'ring-slate-900 scale-110' : 'ring-transparent'
                     }`}
                   />
-                  <button
-                    onClick={() => setThemeColor('green')}
-                    className={`w-7 h-7 rounded-full bg-[#6EDB8A] ring-2 ${
-                      themeColor === 'green' ? 'ring-slate-900 scale-110' : 'ring-transparent'
-                    }`}
-                  />
                 </div>
               </div>
             </div>
@@ -177,9 +171,7 @@ export const ReviewBoosterQR: React.FC = () => {
                 className={`py-3 px-4 -mx-6 -mt-6 mb-5 text-white ${
                   themeColor === 'blue'
                     ? 'bg-gradient-to-r from-blue-600 to-green-700'
-                    : themeColor === 'blue'
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-700'
-                    : 'bg-gradient-to-r from-green-600 to-orange-700'
+                    : 'bg-gradient-to-r from-blue-600 to-blue-700'
                 }`}
               >
                 <div className="flex items-center justify-center gap-1 text-[11px] font-bold uppercase tracking-wider">
