@@ -205,7 +205,7 @@ export const PricingSection: React.FC = () => {
                         : 'bg-[#0F172A] hover:bg-slate-800 text-white'
                     }`}
                   >
-                    <span>{plan.id === 'starter' ? 'Pilih Starter' : plan.id === 'enterprise' ? 'Enterprise' : 'Mulai Uji Coba Gratis 7 Hari'}</span>
+                    <span>{plan.id === 'starter' ? 'Starter' : plan.id === 'enterprise' ? 'Enterprise' : 'Mulai Uji Coba Gratis 7 Hari'}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <p className={`text-[10px] text-center mt-2 ${plan.popular ? 'text-slate-400' : 'text-slate-400'}`}>
