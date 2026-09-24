@@ -88,7 +88,7 @@ export const PricingSection: React.FC = () => {
             Investasi Terjangkau, Reputasi Melejit
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
-            Mulai dengan uji coba gratis 7 hari tanpa kartu kblueit. Batalkan kapan saja tanpa ikatan kontrak.
+            Mulai dengan uji coba gratis 7 hari tanpa kartu kredit. Batalkan kapan saja tanpa ikatan kontrak.
           </p>
 
           {/* Billing Switcher */}
@@ -150,10 +150,7 @@ export const PricingSection: React.FC = () => {
                       {plan.badge}
                     </span>
                     {billingCycle === 'annual' && (
-                      <span className={`text-[11px] font-bold ${plan.popular ? 'text-blue-400' : 'text-[#2563EB]'}`}>
-                        2 Bulan Gratis
-                      </span>
-                    )}
+                              )}
                   </div>
 
                   <h3 className={`text-2xl font-black ${plan.popular ? 'text-white' : 'text-[#0F172A]'}`}>
@@ -214,7 +211,7 @@ export const PricingSection: React.FC = () => {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <p className={`text-[10px] text-center mt-2 ${plan.popular ? 'text-slate-400' : 'text-slate-400'}`}>
-                    Tidak perlu kartu kblueit • Aktif instan
+                    Tidak perlu kartu kredit • Aktif instan
                   </p>
                 </div>
               </div>
