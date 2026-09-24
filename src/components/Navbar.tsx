@@ -21,19 +21,19 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentView }) => {
             className="flex items-center gap-2.5 text-left group"
             aria-label="KetemuReview"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-600 to-emerald-700 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 via-green-600 to-blue-700 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
               <MessageSquareQuote className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-xl tracking-tight text-slate-900">
-                  Ketemu<span className="text-emerald-600">Review</span>
+                <span className="font-extrabold text-xl tracking-tight text-[#0F172A]">
+                  Ketemu<span className="text-[#2563EB]">Review</span>
                 </span>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200/60">
-                  AI PRO
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE]/60">
+                  AI
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 -mt-0.5 font-medium">Google Review Auto-Reply</p>
+              <p className="text-[11px] text-slate-500 -mt-0.5 font-medium">Google Review Management</p>
             </div>
           </button>
 
@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentView }) => {
             </button>
             <button
               onClick={() => {}}
-              className="text-xs font-bold px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-600/30 transition-all flex items-center gap-1.5 hover:shadow-md hover:-translate-y-0.5"
+              className="text-xs font-bold px-4 py-2 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] text-white shadow-sm shadow-blue-600/30 transition-all flex items-center gap-1.5 hover:shadow-md hover:-translate-y-0.5"
             >
               <Rocket className="w-3.5 h-3.5" />
               Mulai Gratis
