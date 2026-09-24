@@ -14,7 +14,7 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { INITIAL_REVIEWS } from './data/mockData';
 import { GoogleReviewItem, ReviewTemplate } from './types';
-import { LayoutDashboard, Sparkles, MessageCircle } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<'landing' | 'dashboard'>('landing');
@@ -149,42 +149,6 @@ export default function App() {
           />
         </main>
       )}
-
-      {/* Persistent Bottom Switcher Float Bar */}
-      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 bg-slate-900/90 backdrop-blur-md text-white p-1.5 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-1">
-        <button
-          onClick={() => {
-            setCurrentView('landing');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 ${
-            currentView === 'landing'
-              ? 'bg-emerald-600 text-white shadow-xs'
-              : 'text-slate-300 hover:text-white'
-          }`}
-        >
-          <Sparkles className="w-3.5 h-3.5 text-emerald-300" />
-          <span>Presentasi Web</span>
-        </button>
-
-        <button
-          onClick={() => {
-            setCurrentView('dashboard');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 ${
-            currentView === 'dashboard'
-              ? 'bg-emerald-600 text-white shadow-xs'
-              : 'text-slate-300 hover:text-white'
-          }`}
-        >
-          <LayoutDashboard className="w-3.5 h-3.5 text-emerald-300" />
-          <span>Dashboard Inbox Google</span>
-          <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">
-            {reviews.filter((r) => r.status === 'unreplied').length}
-          </span>
-        </button>
-      </div>
 
       {/* Footer */}
       <Footer
