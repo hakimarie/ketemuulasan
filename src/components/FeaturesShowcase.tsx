@@ -27,7 +27,7 @@ export const FeaturesShowcase: React.FC = () => {
     {
       icon: ShieldCheck,
       color: 'bg-[#EFF6FF]0/10 text-[#2563EB] border-blue-500/20',
-      title: 'Peblueam Komplain & Resolusi Privat',
+      title: 'Penanganan Komplain & Resolusi Privat',
       desc: 'Ulasan bintang 1-2 ditangani dengan empati tingkat tinggi tanpa saling menyalahkan di publik, langsung menyertakan nomor WhatsApp manajer untuk penyelesaian damai.',
     },
     {
