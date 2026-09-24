@@ -15,6 +15,7 @@ import { Footer } from './components/Footer';
 import { INITIAL_REVIEWS } from './data/mockData';
 import { GoogleReviewItem, ReviewTemplate } from './types';
 import { Sparkles } from 'lucide-react';
+import { signInWithGoogle } from '../app/actions/auth';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<'landing' | 'dashboard'>('landing');
@@ -184,17 +185,17 @@ export default function App() {
               </button>
             </div>
 
-            <button
-              type="button"
-              disabled
-              className="mt-7 w-full rounded-xl border border-slate-300 bg-slate-100 px-4 py-3 text-sm font-bold text-slate-500 cursor-not-allowed"
-              title="Google OAuth belum dikonfigurasi"
-            >
-              Lanjutkan dengan Google
-            </button>
+            <form action={signInWithGoogle}>
+              <button
+                type="submit"
+                className="mt-7 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-bold text-[#0F172A] shadow-sm hover:bg-[#EFF6FF] transition-colors"
+              >
+                Lanjutkan dengan Google
+              </button>
+            </form>
 
             <div className="mt-4 rounded-xl bg-[#EFF6FF] px-4 py-3 text-xs leading-5 text-slate-600">
-              Google OAuth belum terhubung pada versi ini. Tombol Login sekarang membuka alur login yang benar, tanpa mengarahkan pengguna langsung ke dashboard.
+              Login akan menggunakan akun Google dan meminta akses Google Business Profile agar KetemuReview dapat membaca serta mengelola review yang Anda izinkan.
             </div>
 
             <button
