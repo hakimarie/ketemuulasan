@@ -201,7 +201,7 @@ export const PricingSection: React.FC = () => {
                     onClick={() => handleOpenCheckout(plan.name)}
                     className={`w-full py-3.5 px-4 rounded-xl font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer ${
                       plan.popular
-                        ? 'bg-[#EFF6FF]0 hover:bg-blue-400 text-[#0F172A] shadow-blue-500/20'
+                        ? 'bg-transparent border-2 border-white text-white hover:bg-white/10 shadow-none'
                         : 'bg-[#0F172A] hover:bg-slate-800 text-white'
                     }`}
                   >
