@@ -100,7 +100,7 @@ export const InboxDashboard: React.FC<InboxDashboardProps> = ({
                 status: 'replied',
                 replyText: reply,
                 repliedAt: 'Baru saja',
-                repliedBy: 'BalasUlasan AI',
+                repliedBy: 'KetemuReview AI',
               }
             : r
         )
@@ -128,7 +128,7 @@ export const InboxDashboard: React.FC<InboxDashboardProps> = ({
                 status: 'replied',
                 replyText: autoText,
                 repliedAt: 'Baru saja',
-                repliedBy: 'BalasUlasan AI (Batch Auto-Pilot)',
+                repliedBy: 'KetemuReview AI (Batch Auto-Pilot)',
               }
             : r
         )
