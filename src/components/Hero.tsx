@@ -30,15 +30,6 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
-          {/* Top Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE]/80 text-[#1D4ED8] text-xs sm:text-sm font-semibold mb-6 shadow-xs">
-            <span className="flex h-2 w-2 rounded-full bg-[#EFF6FF]0 animate-pulse" />
-            <span>Kloning Resmi & Platform Reputasi Bisnis Indonesia</span>
-            <span className="text-blue-400">|</span>
-            <span className="font-bold text-[#2563EB]">ketemureview</span>
-          </div>
-
-          {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#0F172A] tracking-tight leading-[1.12]">
             Kelola & Balas Ulasan Google Maps & Bisnis{' '}
             <span className="bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent">
