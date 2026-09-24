@@ -252,7 +252,7 @@ export const ReviewBoosterQR: React.FC = () => {
               {/* Table number footer */}
               <div className="text-[11px] font-bold text-slate-400 flex items-center justify-between border-t border-slate-100 pt-3">
                 <span>{tableNumber}</span>
-                <span className="text-emerald-600">Powered by BalasUlasan.com</span>
+                <span className="text-emerald-600">Powered by KetemuReview</span>
               </div>
             </div>
           </div>
