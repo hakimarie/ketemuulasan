@@ -94,14 +94,16 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
             {/* Top Bar of the Mock Window */}
             <div className="bg-[#0F172A] text-slate-200 px-3 sm:px-4 py-3 border-b border-[#0F172A]">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-[#EFF6FF]0/80" />
-                  <div className="w-3 h-3 rounded-full bg-[#ECFDF3]0/80" />
-                  <div className="w-3 h-3 rounded-full bg-[#EFF6FF]0/80" />
-                </div>
-                <div className="sm:ml-3 flex items-center gap-1.5 text-xs text-slate-300 font-medium min-w-0">
-                  <MapPin className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                  <span className="truncate">Google Maps Review Management • <span className="text-blue-400 font-semibold">Kopi Ruang Senja, Senopati</span></span>
+                <div className="flex items-center gap-2 min-w-0">
+                  <div className="flex gap-1.5 shrink-0">
+                    <div className="w-3 h-3 rounded-full bg-slate-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-slate-400/80" />
+                    <div className="w-3 h-3 rounded-full bg-slate-300/80" />
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs text-slate-300 font-medium min-w-0">
+                    <MapPin className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                    <span className="truncate">Google Maps Review Management • <span className="text-blue-400 font-semibold">Kopi Ruang Senja, Senopati</span></span>
+                  </div>
                 </div>
               </div>
 
