@@ -94,7 +94,7 @@ export const INITIAL_REVIEWS: GoogleReviewItem[] = [
     status: 'replied',
     replyText: 'Halo Bapak dr. Satria Wibowo, terima kasih banyak atas ulasan bintang 5 dan kunjungannya bersama keluarga di Kopi Ruang Senja. Kami sangat senang anak-anak menikmati gelato kami dan tim security kami bisa membantu dengan baik. Sampai jumpa di akhir pekan berikutnya ya Pak! 🙏✨',
     repliedAt: '1 jam yang lalu',
-    repliedBy: 'BalasUlasan AI (Auto-Pilot)',
+    repliedBy: 'KetemuReview (Auto-Pilot)',
     sentiment: 'positive',
     tags: ['Keluarga', 'Parkir', 'Gelato'],
   },
@@ -121,7 +121,7 @@ export const INITIAL_REVIEWS: GoogleReviewItem[] = [
     status: 'replied',
     replyText: 'Hai Kak Reza Maulana, wow terima kasih banyak atas kesetiaannya sudah berkunjung hingga 5 kali di Kopi Ruang Senja! Komentar Kakak membuat semangat tim barista kami semakin membara. Kami nantikan kedatangan Kakak yang ke-6 ya! 🙌☕',
     repliedAt: '22 jam yang lalu',
-    repliedBy: 'BalasUlasan AI (Auto-Pilot)',
+    repliedBy: 'KetemuReview (Auto-Pilot)',
     sentiment: 'positive',
     tags: ['Langganan', 'Latte Art'],
   },
@@ -287,12 +287,12 @@ export const TESTIMONIALS_DATA = [
 
 export const FAQ_DATA = [
   {
-    question: 'Bagaimana cara BalasUlasan terhubung dengan Google Maps bisnis saya?',
+    question: 'Bagaimana cara KetemuReview terhubung dengan Google Maps bisnis saya?',
     answer: 'BalasUlasan terintegrasi secara aman melalui Google Business Profile API resmi. Anda cukup menekan tombol "Hubungkan Akun Google" dan memilih lokasi cabang bisnis yang ingin disinkronkan. Tidak ada akses data pribadi atau kata sandi yang disimpan di luar otorisasi resmi Google OAuth.',
   },
   {
     question: 'Apakah balasan yang dihasilkan AI terdengar kaku seperti robot bot?',
-    answer: 'Sama sekali tidak! BalasUlasan menggunakan model AI generatif terkini yang dirancang khusus memahami bahasa Indonesia ragam santun, kasual, hingga logat khas lokal. AI mengenali isi detail ulasan pelanggan (nama menu, nama staf, keluhan spesifik) sehingga setiap balasan terasa unik, hangat, dan personal.',
+    answer: 'Sama sekali tidak! KetemuReview menggunakan model AI generatif terkini yang dirancang khusus memahami bahasa Indonesia ragam santun, kasual, hingga logat khas lokal. AI mengenali isi detail ulasan pelanggan (nama menu, nama staf, keluhan spesifik) sehingga setiap balasan terasa unik, hangat, dan personal.',
   },
   {
     question: 'Mengapa membalas ulasan Google Maps bisa menaikkan ranking SEO lokal bisnis?',
@@ -303,7 +303,7 @@ export const FAQ_DATA = [
     answer: 'Kami memiliki fitur "Pencegahan Krisis". Anda bisa mengatur agar ulasan rating 1-3 tidak langsung dibalas secara otomatis, melainkan AI akan menyusun draf permohonan maaf empatik lengkap dengan kontak WhatsApp manajer untuk penyelesaian privat. Pemilik bisnis juga langsung menerima notifikasi darurat.',
   },
   {
-    question: 'Apakah BalasUlasan mendukung banyak cabang (multi-location)?',
+    question: 'Apakah KetemuReview mendukung banyak cabang (multi-location)?',
     answer: 'Ya! Paket Bisnis Pro mendukung hingga 3 lokasi cabang dan Paket Enterprise mendukung lokasi cabang tanpa batas. Anda bisa memantau semua ulasan dari puluhan outlet di seluruh kota dalam satu dashboard terpusat.',
   },
   {
