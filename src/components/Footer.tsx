@@ -114,7 +114,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
 
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-          <p>© {new Date().getFullYear()} BalasUlasan.com. Seluruh hak cipta dilindungi undang-undang.</p>
+          <p>© {new Date().getFullYear()} KetemuReview. Seluruh hak cipta dilindungi undang-undang.</p>
           <p className="flex items-center gap-1">
             Dibuat dengan <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> untuk UMKM dan Pemilik Bisnis Indonesia
           </p>
