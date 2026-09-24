@@ -53,7 +53,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
     { label: 'Ramah & Hangat', icon: '🌸', desc: 'Apresiatif & menyentuh hati' },
     { label: 'Formal & Profesional', icon: '💼', desc: 'Standar korporat & medis' },
     { label: 'Santai & Kasual', icon: '☕', desc: 'Luwes & cocok untuk kafe/fashion' },
-    { label: 'Solutif & Empatik', icon: '🤝', desc: 'Khusus redam komplain 1-3 bintang' },
+    { label: 'Solutif & Empatik', icon: '🤝', desc: 'Khusus blueam komplain 1-3 bintang' },
     { label: 'Promotif', icon: '📢', desc: 'Disertai promo menu/layanan baru' },
   ];
 
@@ -132,11 +132,11 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200/80 mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] text-[#1D4ED8] text-xs font-bold border border-[#BFDBFE]/80 mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#2563EB]" />
             Live Interactive AI Studio
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Coba Langsung Generator Balasan AI
           </h2>
           <p className="mt-2 text-slate-600 text-sm sm:text-base">
@@ -149,7 +149,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1">
-              <Wand2 className="w-3.5 h-3.5 text-emerald-600" /> Pilih Contoh Ulasan Cepat:
+              <Wand2 className="w-3.5 h-3.5 text-[#2563EB]" /> Pilih Contoh Ulasan Cepat:
             </span>
             <span className="text-[11px] text-slate-400">Klik salah satu untuk menguji AI</span>
           </div>
@@ -160,7 +160,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                 onClick={() => handleApplyPreset(preset)}
                 className={`text-xs px-3 py-2 rounded-lg border font-medium transition-all flex items-center gap-1.5 ${
                   reviewText === preset.reviewText
-                    ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+                    ? 'bg-[#2563EB] text-white border-blue-600 shadow-sm'
                     : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200'
                 }`}
               >
@@ -180,8 +180,8 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
           {/* LEFT COLUMN: Input Form (5 cols) */}
           <div className="lg:col-span-5 bg-slate-50/70 p-6 rounded-2xl border border-slate-200/90 shadow-sm space-y-5">
             <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-              <h3 className="font-bold text-slate-900 text-base flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-emerald-600" />
+              <h3 className="font-bold text-[#0F172A] text-base flex items-center gap-2">
+                <MessageSquare className="w-4 h-4 text-[#2563EB]" />
                 Parameter Ulasan
               </h3>
               <span className="text-xs text-slate-500 font-medium">Langkah 1 dari 2</span>
@@ -191,14 +191,14 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  Nama Bisnis Anda <span className="text-red-500">*</span>
+                  Nama Bisnis Anda <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="text"
                   value={businessName}
                   onChange={(e) => setBusinessName(e.target.value)}
                   placeholder="Contoh: Kopi Ruang Senja"
-                  className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-medium text-slate-800"
+                  className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-medium text-slate-800"
                 />
               </div>
 
@@ -211,7 +211,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                   value={businessType}
                   onChange={(e) => setBusinessType(e.target.value)}
                   placeholder="Kuliner, Klinik, Bengkel"
-                  className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-medium text-slate-800"
+                  className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-medium text-slate-800"
                 />
               </div>
             </div>
@@ -227,7 +227,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                   value={reviewerName}
                   onChange={(e) => setReviewerName(e.target.value)}
                   placeholder="Contoh: Kak Dimas"
-                  className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 font-medium text-slate-800"
+                  className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-medium text-slate-800"
                 />
               </div>
 
@@ -253,7 +253,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                       <Star
                         className={`w-5 h-5 ${
                           starVal <= rating
-                            ? 'text-amber-400 fill-amber-400'
+                            ? 'text-green-400 fill-green-400'
                             : 'text-slate-300'
                         }`}
                       />
@@ -270,7 +270,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
             <div>
               <div className="flex items-center justify-between mb-1">
                 <label className="block text-xs font-semibold text-slate-700">
-                  Isi Ulasan Pelanggan <span className="text-red-500">*</span>
+                  Isi Ulasan Pelanggan <span className="text-blue-500">*</span>
                 </label>
                 <span className="text-[11px] text-slate-400">
                   {reviewText.length} karakter
@@ -281,7 +281,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                 value={reviewText}
                 onChange={(e) => setReviewText(e.target.value)}
                 placeholder="Tulis atau salin ulasan yang diberikan pelanggan di Google Maps..."
-                className="w-full text-xs sm:text-sm p-3 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-slate-800 leading-relaxed resize-y"
+                className="w-full text-xs sm:text-sm p-3 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800 leading-relaxed resize-y"
               />
             </div>
 
@@ -298,7 +298,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                     onClick={() => setTone(item.label)}
                     className={`p-2 rounded-lg text-left border transition-all text-xs ${
                       tone === item.label
-                        ? 'bg-emerald-50 border-emerald-500 text-emerald-900 font-bold shadow-xs'
+                        ? 'bg-[#EFF6FF] border-blue-500 text-blue-900 font-bold shadow-xs'
                         : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
                     }`}
                   >
@@ -319,7 +319,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 font-medium"
+                className="w-full text-xs px-3 py-2 rounded-lg bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 font-medium"
               >
                 {LANGUAGE_OPTIONS.map((lang) => (
                   <option key={lang} value={lang}>
@@ -334,7 +334,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
               <button
                 type="button"
                 onClick={() => setShowAdvanced(!showAdvanced)}
-                className="flex items-center justify-between w-full text-xs font-semibold text-slate-600 hover:text-slate-900 py-1"
+                className="flex items-center justify-between w-full text-xs font-semibold text-slate-600 hover:text-[#0F172A] py-1"
               >
                 <span className="flex items-center gap-1.5">
                   <SlidersHorizontal className="w-3.5 h-3.5 text-slate-500" />
@@ -354,21 +354,21 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                       value={promotion}
                       onChange={(e) => setPromotion(e.target.value)}
                       placeholder="Contoh: diskon 15% untuk repeat order"
-                      className="w-full px-2.5 py-1.5 rounded-md bg-white border border-slate-300 text-xs focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-2.5 py-1.5 rounded-md bg-white border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
 
                   {rating <= 3 && (
                     <div>
-                      <label className="block text-[11px] font-semibold text-amber-800 mb-1 flex items-center gap-1">
-                        <AlertTriangle className="w-3 h-3 text-amber-600" /> Kontak Penyelesaian Komplain (WA / CS):
+                      <label className="block text-[11px] font-semibold text-[#237A45] mb-1 flex items-center gap-1">
+                        <AlertTriangle className="w-3 h-3 text-[#2F9E59]" /> Kontak Penyelesaian Komplain (WA / CS):
                       </label>
                       <input
                         type="text"
                         value={contactResolution}
                         onChange={(e) => setContactResolution(e.target.value)}
                         placeholder="Contoh: WhatsApp Manajer di 0812-xxxx-xxxx"
-                        className="w-full px-2.5 py-1.5 rounded-md bg-amber-50 border border-amber-300 text-xs text-amber-950 font-medium focus:ring-2 focus:ring-amber-500"
+                        className="w-full px-2.5 py-1.5 rounded-md bg-[#ECFDF3] border border-green-300 text-xs text-green-950 font-medium focus:ring-2 focus:ring-green-500"
                       />
                     </div>
                   )}
@@ -382,7 +382,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                       value={customNotes}
                       onChange={(e) => setCustomNotes(e.target.value)}
                       placeholder="Contoh: sampaikan bahwa AC sudah kami perbaiki kemarin"
-                      className="w-full px-2.5 py-1.5 rounded-md bg-white border border-slate-300 text-xs focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-2.5 py-1.5 rounded-md bg-white border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -394,7 +394,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
               type="button"
               disabled={isLoading || !reviewText.trim()}
               onClick={handleGenerate}
-              className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-700 hover:to-teal-800 text-white font-bold text-sm shadow-md shadow-emerald-600/20 hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed group cursor-pointer"
+              className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 hover:from-blue-700 hover:to-green-800 text-white font-bold text-sm shadow-md shadow-blue-600/20 hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed group cursor-pointer"
             >
               {isLoading ? (
                 <>
@@ -403,7 +403,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                 </>
               ) : (
                 <>
-                  <Sparkles className="w-4 h-4 text-emerald-200 group-hover:rotate-12 transition-transform" />
+                  <Sparkles className="w-4 h-4 text-blue-200 group-hover:rotate-12 transition-transform" />
                   <span>Hasilkan 3 Opsi Balasan AI</span>
                 </>
               )}
@@ -415,10 +415,10 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
             {result ? (
               <div className="space-y-6 animate-in fade-in duration-300">
                 {/* Sentiment Analysis Bar */}
-                <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border border-slate-800">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div className="bg-[#0F172A] text-white p-5 rounded-2xl shadow-lg border border-[#0F172A]">
+                  <div className="flex items-center justify-between border-b border-[#0F172A] pb-3">
                     <div className="flex items-center gap-2">
-                      <span className="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-400">
+                      <span className="p-1.5 rounded-lg bg-[#EFF6FF]0/20 text-blue-400">
                         <CheckCircle2 className="w-4 h-4" />
                       </span>
                       <div>
@@ -431,10 +431,10 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                       <span
                         className={`text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
                           result.analysis.sentiment === 'positive'
-                            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                            ? 'bg-[#EFF6FF]0/20 text-blue-300 border border-blue-500/30'
                             : result.analysis.sentiment === 'negative'
-                            ? 'bg-red-500/20 text-red-300 border border-red-500/30'
-                            : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                            ? 'bg-[#EFF6FF]0/20 text-blue-300 border border-blue-500/30'
+                            : 'bg-[#ECFDF3]0/20 text-green-300 border border-green-500/30'
                         }`}
                       >
                         {result.analysis.sentiment === 'positive'
@@ -443,7 +443,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                           ? 'Komplain Kritis'
                           : 'Netral'}
                       </span>
-                      <span className="text-xs font-black text-emerald-400">
+                      <span className="text-xs font-black text-blue-400">
                         {result.analysis.sentimentScore}%
                       </span>
                     </div>
@@ -470,10 +470,10 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                   </div>
 
                   {result.analysis.actionAdvice && (
-                    <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-start gap-2 text-xs text-amber-300/90 bg-amber-950/20 p-2.5 rounded-xl border border-amber-900/30">
-                      <Lightbulb className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                    <div className="mt-4 pt-3 border-t border-[#0F172A]/80 flex items-start gap-2 text-xs text-green-300/90 bg-green-950/20 p-2.5 rounded-xl border border-green-900/30">
+                      <Lightbulb className="w-4 h-4 text-green-400 shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-amber-300">Rekomendasi Tindakan Bisnis:</strong> {result.analysis.actionAdvice}
+                        <strong className="text-green-300">Rekomendasi Tindakan Bisnis:</strong> {result.analysis.actionAdvice}
                       </div>
                     </div>
                   )}
@@ -482,8 +482,8 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                 {/* 3 Generated Options */}
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-extrabold text-slate-900 text-base flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-emerald-600" />
+                    <h3 className="font-extrabold text-[#0F172A] text-base flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-[#2563EB]" />
                       3 Variasi Balasan AI (Siap Salin & Pakai)
                     </h3>
                     <span className="text-xs text-slate-500 font-medium">Klik Salin atau Kirim</span>
@@ -497,10 +497,10 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                       {/* Option Header */}
                       <div className="flex items-center justify-between mb-3 border-b border-slate-100 pb-2.5">
                         <div className="flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">
+                          <span className="w-6 h-6 rounded-full bg-blue-100 text-[#1D4ED8] flex items-center justify-center text-xs font-bold">
                             {idx + 1}
                           </span>
-                          <h4 className="font-bold text-slate-900 text-sm">{option.title}</h4>
+                          <h4 className="font-bold text-[#0F172A] text-sm">{option.title}</h4>
                           <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200/80">
                             {option.badge}
                           </span>
@@ -525,7 +525,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                               ),
                             });
                           }}
-                          className="w-full text-xs sm:text-sm p-3 rounded-xl border border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 leading-relaxed font-sans"
+                          className="w-full text-xs sm:text-sm p-3 rounded-xl border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 leading-relaxed font-sans"
                         />
                       ) : (
                         <div className="text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50/70 p-3.5 rounded-xl border border-slate-100 font-normal">
@@ -548,7 +548,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                             onClick={() =>
                               setEditableOptionId(editableOptionId === option.id ? null : option.id)
                             }
-                            className="text-xs text-slate-600 hover:text-slate-900 font-medium px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 flex items-center gap-1"
+                            className="text-xs text-slate-600 hover:text-[#0F172A] font-medium px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 flex items-center gap-1"
                           >
                             <Edit3 className="w-3 h-3" />
                             {editableOptionId === option.id ? 'Selesai Edit' : 'Edit Teks'}
@@ -560,7 +560,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                             onClick={() => handleCopy(option.id, option.replyText)}
                             className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer ${
                               copiedId === option.id
-                                ? 'bg-emerald-600 text-white shadow-xs'
+                                ? 'bg-[#2563EB] text-white shadow-xs'
                                 : 'bg-slate-100 hover:bg-slate-200 text-slate-800'
                             }`}
                           >
@@ -582,8 +582,8 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                               onClick={() => handleSendToInbox(option.id, option.replyText)}
                               className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer ${
                                 sentSuccessId === option.id
-                                  ? 'bg-emerald-700 text-white'
-                                  : 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-xs'
+                                  ? 'bg-blue-700 text-white'
+                                  : 'bg-[#2563EB] hover:bg-[#1D4ED8] text-white shadow-xs'
                               }`}
                             >
                               <Send className="w-3.5 h-3.5" />
@@ -599,7 +599,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
             ) : (
               /* Empty state / placeholder prompt */
               <div className="bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center flex flex-col items-center justify-center min-h-[440px]">
-                <div className="w-16 h-16 rounded-2xl bg-emerald-100/60 flex items-center justify-center text-emerald-600 mb-4 shadow-xs">
+                <div className="w-16 h-16 rounded-2xl bg-blue-100/60 flex items-center justify-center text-[#2563EB] mb-4 shadow-xs">
                   <Sparkles className="w-8 h-8" />
                 </div>
                 <h3 className="font-extrabold text-slate-800 text-lg">
@@ -613,7 +613,7 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
                   <button
                     onClick={handleGenerate}
-                    className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm flex items-center gap-1.5 transition-all"
+                    className="px-4 py-2 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-bold shadow-sm flex items-center gap-1.5 transition-all"
                   >
                     <Wand2 className="w-3.5 h-3.5" />
                     Coba Generate Contoh Kasus Sekarang
