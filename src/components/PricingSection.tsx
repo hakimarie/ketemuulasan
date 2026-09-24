@@ -80,15 +80,15 @@ export const PricingSection: React.FC = () => {
     <section id="pricing" className="py-20 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200/80 mb-3">
-            <Zap className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] text-[#1D4ED8] text-xs font-bold border border-[#BFDBFE]/80 mb-3">
+            <Zap className="w-3.5 h-3.5 text-[#2563EB]" />
             Paket Harga Transparan
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Investasi Terjangkau, Reputasi Melejit
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
-            Mulai dengan uji coba gratis 7 hari tanpa kartu kredit. Batalkan kapan saja tanpa ikatan kontrak.
+            Mulai dengan uji coba gratis 7 hari tanpa kartu kblueit. Batalkan kapan saja tanpa ikatan kontrak.
           </p>
 
           {/* Billing Switcher */}
@@ -97,8 +97,8 @@ export const PricingSection: React.FC = () => {
               onClick={() => setBillingCycle('monthly')}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                 billingCycle === 'monthly'
-                  ? 'bg-white text-slate-900 shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-white text-[#0F172A] shadow-xs'
+                  : 'text-slate-600 hover:text-[#0F172A]'
               }`}
             >
               Langganan Bulanan
@@ -107,12 +107,12 @@ export const PricingSection: React.FC = () => {
               onClick={() => setBillingCycle('annual')}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
                 billingCycle === 'annual'
-                  ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#2563EB] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#0F172A]'
               }`}
             >
               <span>Langganan Tahunan</span>
-              <span className="bg-amber-400 text-amber-950 text-[10px] font-black px-1.5 py-0.2 rounded-full">
+              <span className="bg-green-400 text-green-950 text-[10px] font-black px-1.5 py-0.2 rounded-full">
                 Hemat 20%
               </span>
             </button>
@@ -134,8 +134,8 @@ export const PricingSection: React.FC = () => {
                 key={plan.id}
                 className={`rounded-3xl p-7 flex flex-col justify-between transition-all ${
                   plan.popular
-                    ? 'bg-slate-900 text-white shadow-xl ring-2 ring-emerald-500 scale-100 md:-translate-y-2'
-                    : 'bg-white text-slate-900 border border-slate-200/90 shadow-xs hover:shadow-md'
+                    ? 'bg-[#0F172A] text-white shadow-xl ring-2 ring-blue-500 scale-100 md:-translate-y-2'
+                    : 'bg-white text-[#0F172A] border border-slate-200/90 shadow-xs hover:shadow-md'
                 }`}
               >
                 <div>
@@ -143,20 +143,20 @@ export const PricingSection: React.FC = () => {
                     <span
                       className={`text-xs font-extrabold px-3 py-1 rounded-full ${
                         plan.popular
-                          ? 'bg-emerald-500 text-slate-950 font-black'
+                          ? 'bg-[#EFF6FF]0 text-[#0F172A] font-black'
                           : 'bg-slate-100 text-slate-700'
                       }`}
                     >
                       {plan.badge}
                     </span>
                     {billingCycle === 'annual' && (
-                      <span className={`text-[11px] font-bold ${plan.popular ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                      <span className={`text-[11px] font-bold ${plan.popular ? 'text-blue-400' : 'text-[#2563EB]'}`}>
                         2 Bulan Gratis
                       </span>
                     )}
                   </div>
 
-                  <h3 className={`text-2xl font-black ${plan.popular ? 'text-white' : 'text-slate-900'}`}>
+                  <h3 className={`text-2xl font-black ${plan.popular ? 'text-white' : 'text-[#0F172A]'}`}>
                     {plan.name}
                   </h3>
                   <p className={`text-xs mt-1.5 ${plan.popular ? 'text-slate-300' : 'text-slate-500'}`}>
@@ -190,7 +190,7 @@ export const PricingSection: React.FC = () => {
                       <div key={fIdx} className="flex items-start gap-2.5 text-xs">
                         <Check
                           className={`w-4 h-4 shrink-0 mt-0.5 ${
-                            plan.popular ? 'text-emerald-400' : 'text-emerald-600'
+                            plan.popular ? 'text-blue-400' : 'text-[#2563EB]'
                           }`}
                         />
                         <span className={plan.popular ? 'text-slate-200' : 'text-slate-700'}>
@@ -206,15 +206,15 @@ export const PricingSection: React.FC = () => {
                     onClick={() => handleOpenCheckout(plan.name)}
                     className={`w-full py-3.5 px-4 rounded-xl font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer ${
                       plan.popular
-                        ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-emerald-500/20'
-                        : 'bg-slate-900 hover:bg-slate-800 text-white'
+                        ? 'bg-[#EFF6FF]0 hover:bg-blue-400 text-[#0F172A] shadow-blue-500/20'
+                        : 'bg-[#0F172A] hover:bg-slate-800 text-white'
                     }`}
                   >
                     <span>Mulai Uji Coba Gratis 7 Hari</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <p className={`text-[10px] text-center mt-2 ${plan.popular ? 'text-slate-400' : 'text-slate-400'}`}>
-                    Tidak perlu kartu kredit • Aktif instan
+                    Tidak perlu kartu kblueit • Aktif instan
                   </p>
                 </div>
               </div>
@@ -224,7 +224,7 @@ export const PricingSection: React.FC = () => {
 
         {/* Modal Checkout Simulation */}
         {selectedPlanModal && (
-          <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-[#0F172A]/60 backdrop-blur-xs flex items-center justify-center p-4">
             <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95">
               <button
                 onClick={() => setSelectedPlanModal(null)}
@@ -235,10 +235,10 @@ export const PricingSection: React.FC = () => {
 
               {!checkoutSuccess ? (
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg mb-3">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-100 text-[#2563EB] flex items-center justify-center font-bold text-lg mb-3">
                     <Sparkles className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-extrabold text-slate-900">
+                  <h3 className="text-xl font-extrabold text-[#0F172A]">
                     Aktivasi Akun {selectedPlanModal}
                   </h3>
                   <p className="text-xs text-slate-500 mt-1">
@@ -252,9 +252,9 @@ export const PricingSection: React.FC = () => {
                       </label>
                       <input
                         type="text"
-                        required
+                        requiblue
                         placeholder="Contoh: Arie Hakim"
-                        className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                        className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
 
@@ -264,11 +264,11 @@ export const PricingSection: React.FC = () => {
                       </label>
                       <input
                         type="email"
-                        required
+                        requiblue
                         value={emailInput}
                         onChange={(e) => setEmailInput(e.target.value)}
                         placeholder="email@bisnisanda.com"
-                        className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                        className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
 
@@ -278,16 +278,16 @@ export const PricingSection: React.FC = () => {
                       </label>
                       <input
                         type="tel"
-                        required
+                        requiblue
                         placeholder="0812-xxxx-xxxx"
-                        className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                        className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
 
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md transition-all cursor-pointer"
+                        className="w-full py-3 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-xs shadow-md transition-all cursor-pointer"
                       >
                         Mulai Trial Sekarang & Hubungkan Google
                       </button>
@@ -296,10 +296,10 @@ export const PricingSection: React.FC = () => {
                 </div>
               ) : (
                 <div className="text-center py-4 space-y-3">
-                  <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 rounded-full bg-blue-100 text-[#2563EB] flex items-center justify-center mx-auto">
                     <Check className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-extrabold text-slate-900">
+                  <h3 className="text-xl font-extrabold text-[#0F172A]">
                     Selamat Bergabung di KetemuReview!
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed max-w-xs mx-auto">
@@ -307,7 +307,7 @@ export const PricingSection: React.FC = () => {
                   </p>
                   <button
                     onClick={() => setSelectedPlanModal(null)}
-                    className="mt-4 px-6 py-2.5 bg-slate-900 text-white rounded-xl text-xs font-bold hover:bg-slate-800"
+                    className="mt-4 px-6 py-2.5 bg-[#0F172A] text-white rounded-xl text-xs font-bold hover:bg-slate-800"
                   >
                     Tutup & Lanjutkan Eksplorasi
                   </button>
