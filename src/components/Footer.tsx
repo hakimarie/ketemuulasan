@@ -8,23 +8,23 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) => {
   return (
-    <footer className="bg-slate-950 text-slate-400 text-xs py-14 border-t border-slate-800">
+    <footer className="bg-[#0F172A] text-slate-400 text-xs py-14 border-t border-[#0F172A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Col 1: Brand */}
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-extrabold text-base">
+              <div className="w-8 h-8 rounded-lg bg-[#2563EB] flex items-center justify-center text-white font-extrabold text-base">
                 <MessageSquareQuote className="w-4 h-4" />
               </div>
               <span className="font-extrabold text-lg text-white tracking-tight">
-                Ketemu<span className="text-emerald-500">Review</span>
+                Ketemu<span className="text-blue-500">Review</span>
               </span>
             </div>
             <p className="text-slate-400 text-xs leading-relaxed">
               Platform otomasi reputasi dan auto-reply ulasan Google Business Profile #1 di Indonesia berbasis AI Generatif cerdas.
             </p>
-            <div className="flex items-center gap-2 text-emerald-400 text-[11px] font-semibold">
+            <div className="flex items-center gap-2 text-blue-400 text-[11px] font-semibold">
               <ShieldCheck className="w-4 h-4" />
               <span>Google Partner & API Compliant</span>
             </div>
@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
               <li>
                 <button
                   onClick={() => onNavigate('generator')}
-                  className="hover:text-emerald-400 transition-colors text-left"
+                  className="hover:text-blue-400 transition-colors text-left"
                 >
                   AI Review Reply Generator
                 </button>
@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
               <li>
                 <button
                   onClick={onOpenDashboard}
-                  className="hover:text-emerald-400 transition-colors text-left"
+                  className="hover:text-blue-400 transition-colors text-left"
                 >
                   Dashboard Inbox Google Bisnisku
                 </button>
@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
               <li>
                 <button
                   onClick={() => onNavigate('autopilot')}
-                  className="hover:text-emerald-400 transition-colors text-left"
+                  className="hover:text-blue-400 transition-colors text-left"
                 >
                   Aturan Auto-Pilot 24/7
                 </button>
@@ -61,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
               <li>
                 <button
                   onClick={() => onNavigate('templates')}
-                  className="hover:text-emerald-400 transition-colors text-left"
+                  className="hover:text-blue-400 transition-colors text-left"
                 >
                   Koleksi Template Balasan
                 </button>
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
               <li>
                 <button
                   onClick={() => onNavigate('qr-booster')}
-                  className="hover:text-emerald-400 transition-colors text-left"
+                  className="hover:text-blue-400 transition-colors text-left"
                 >
                   QR Code Review Standee Meja
                 </button>
@@ -97,7 +97,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
               <li>
                 <button
                   onClick={() => onNavigate('faq')}
-                  className="hover:text-emerald-400 transition-colors text-left"
+                  className="hover:text-blue-400 transition-colors text-left"
                 >
                   Pusat Bantuan & FAQ
                 </button>
@@ -113,10 +113,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDashboard }) =
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div className="pt-8 border-t border-[#0F172A] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <p>© {new Date().getFullYear()} KetemuReview. Seluruh hak cipta dilindungi undang-undang.</p>
           <p className="flex items-center gap-1">
-            Dibuat dengan <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> untuk UMKM dan Pemilik Bisnis Indonesia
+            Dibuat dengan <Heart className="w-3.5 h-3.5 text-blue-500 fill-blue-500" /> untuk UMKM dan Pemilik Bisnis Indonesia
           </p>
         </div>
       </div>
