@@ -242,7 +242,7 @@ export const PricingSection: React.FC = () => {
                     Aktivasi Akun {selectedPlanModal}
                   </h3>
                   <p className="text-xs text-slate-500 mt-1">
-                    Nikmati akses penuh fitur BalasUlasan selama 7 hari tanpa biaya apapun.
+                    Nikmati akses penuh fitur KetemuReview selama 7 hari tanpa biaya apapun.
                   </p>
 
                   <form onSubmit={handleCheckoutSubmit} className="mt-5 space-y-3.5 text-xs">
@@ -300,7 +300,7 @@ export const PricingSection: React.FC = () => {
                     <Check className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-extrabold text-slate-900">
-                    Selamat Bergabung di BalasUlasan!
+                    Selamat Bergabung di KetemuReview!
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed max-w-xs mx-auto">
                     Instruksi aktivasi dan link sinkronisasi Google Business Profile telah dikirimkan ke <strong>{emailInput}</strong>.
