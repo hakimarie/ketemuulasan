@@ -25,12 +25,12 @@ export const RoiCalculator: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden">
           {/* Background pattern */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#EFF6FF]0/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
             {/* Slider Column */}
             <div className="w-full lg:w-1/2 space-y-5">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF]0/20 text-blue-300 text-xs font-bold border border-blue-500/30">
                 <Calculator className="w-3.5 h-3.5" />
                 Kalkulator Penghematan Bisnis
               </div>
@@ -46,7 +46,7 @@ export const RoiCalculator: React.FC = () => {
               <div>
                 <div className="flex items-center justify-between font-bold text-sm mb-2">
                   <span className="text-slate-300">Volume Ulasan Bulanan:</span>
-                  <span className="text-2xl text-emerald-400 font-black">{monthlyReviews} Ulasan</span>
+                  <span className="text-2xl text-blue-400 font-black">{monthlyReviews} Ulasan</span>
                 </div>
                 <input
                   type="range"
@@ -55,7 +55,7 @@ export const RoiCalculator: React.FC = () => {
                   step={10}
                   value={monthlyReviews}
                   onChange={(e) => setMonthlyReviews(Number(e.target.value))}
-                  className="w-full h-2.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                  className="w-full h-2.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500"
                 />
                 <div className="flex justify-between text-[11px] text-slate-400 mt-1 font-medium">
                   <span>10 Ulasan (UMKM Baru)</span>
@@ -67,14 +67,14 @@ export const RoiCalculator: React.FC = () => {
 
             {/* Results Column */}
             <div className="w-full lg:w-1/2 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 space-y-4">
-              <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+              <div className="text-xs font-bold uppercase tracking-wider text-blue-400 flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5" /> Hasil Estimasi Penghematan
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-slate-900/60 p-4 rounded-xl border border-white/5">
+                <div className="bg-[#0F172A]/60 p-4 rounded-xl border border-white/5">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-                    <Clock className="w-3.5 h-3.5 text-amber-400" />
+                    <Clock className="w-3.5 h-3.5 text-green-400" />
                     Waktu Dihemat
                   </div>
                   <div className="text-2xl sm:text-3xl font-black text-white mt-1">
@@ -85,12 +85,12 @@ export const RoiCalculator: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-900/60 p-4 rounded-xl border border-white/5">
+                <div className="bg-[#0F172A]/60 p-4 rounded-xl border border-white/5">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
-                    <DollarSign className="w-3.5 h-3.5 text-emerald-400" />
+                    <DollarSign className="w-3.5 h-3.5 text-blue-400" />
                     Nilai Efisiensi
                   </div>
-                  <div className="text-xl sm:text-2xl font-black text-emerald-400 mt-1">
+                  <div className="text-xl sm:text-2xl font-black text-blue-400 mt-1">
                     {formattedMoney}
                   </div>
                   <div className="text-[10px] text-slate-400 mt-0.5">
@@ -99,9 +99,9 @@ export const RoiCalculator: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-emerald-950/40 border border-emerald-500/30 p-3 rounded-xl flex items-center gap-3">
-                <TrendingUp className="w-5 h-5 text-emerald-400 shrink-0" />
-                <p className="text-xs text-emerald-200">
+              <div className="bg-blue-950/40 border border-blue-500/30 p-3 rounded-xl flex items-center gap-3">
+                <TrendingUp className="w-5 h-5 text-blue-400 shrink-0" />
+                <p className="text-xs text-blue-200">
                   Rating bisnis diproyeksikan naik <strong>+0.3 hingga +0.6 bintang</strong> dalam 90 hari karena tingkat respon mencapai 100%!
                 </p>
               </div>
