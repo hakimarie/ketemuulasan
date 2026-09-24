@@ -21,6 +21,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('generator');
   const [reviews, setReviews] = useState<GoogleReviewItem[]>(INITIAL_REVIEWS);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [loginOpen, setLoginOpen] = useState(false);
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -94,6 +95,7 @@ export default function App() {
         setCurrentView={setCurrentView}
         activeSection={activeSection}
         scrollToSection={scrollToSection}
+        onOpenLogin={() => setLoginOpen(true)}
       />
 
       {/* Content Rendering based on View */}
@@ -148,6 +150,65 @@ export default function App() {
             }}
           />
         </main>
+      )}
+
+
+      {loginOpen && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-950/40 px-4 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="login-title"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setLoginOpen(false);
+          }}
+        >
+          <div className="w-full max-w-md rounded-3xl bg-white p-6 sm:p-8 shadow-2xl border border-slate-200">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2563EB]">KetemuReview</p>
+                <h2 id="login-title" className="mt-2 text-2xl font-extrabold tracking-tight text-[#0F172A]">
+                  Masuk ke akun Anda
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-slate-500">
+                  Hubungkan akun Google Business Profile untuk mengelola review dari satu inbox.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setLoginOpen(false)}
+                className="h-9 w-9 shrink-0 rounded-full text-slate-400 hover:bg-slate-100 hover:text-slate-700 transition-colors"
+                aria-label="Tutup login"
+              >
+                ×
+              </button>
+            </div>
+
+            <button
+              type="button"
+              disabled
+              className="mt-7 w-full rounded-xl border border-slate-300 bg-slate-100 px-4 py-3 text-sm font-bold text-slate-500 cursor-not-allowed"
+              title="Google OAuth belum dikonfigurasi"
+            >
+              Lanjutkan dengan Google
+            </button>
+
+            <div className="mt-4 rounded-xl bg-[#EFF6FF] px-4 py-3 text-xs leading-5 text-slate-600">
+              Google OAuth belum terhubung pada versi ini. Tombol Login sekarang membuka alur login yang benar, tanpa mengarahkan pengguna langsung ke dashboard.
+            </div>
+
+            <button
+              type="button"
+              onClick={() => {
+                setLoginOpen(false);
+                scrollToSection('pricing');
+              }}
+              className="mt-5 w-full text-sm font-bold text-[#2563EB] hover:underline"
+            >
+              Belum punya akun? Mulai Gratis
+            </button>
+          </div>
+        </div>
       )}
 
       {/* Footer */}
