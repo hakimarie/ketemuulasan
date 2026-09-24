@@ -35,7 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
             <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>Kloning Resmi & Platform Reputasi Bisnis Indonesia</span>
             <span className="text-emerald-400">|</span>
-            <span className="font-bold text-emerald-700">balasulasan.com</span>
+            <span className="font-bold text-emerald-700">ketemureview</span>
           </div>
 
           {/* Main Headline */}
@@ -126,7 +126,7 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
                   }`}
                 >
                   <Sparkles className="w-3 h-3 text-emerald-200" />
-                  Dengan BalasUlasan AI
+                  Dengan KetemuReview
                 </button>
               </div>
             </div>
