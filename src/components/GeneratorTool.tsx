@@ -99,6 +99,9 @@ export const GeneratorTool: React.FC<GeneratorToolProps> = ({ onSendToInbox }) =
       setResult(data);
     } catch (err) {
       console.error(err);
+      setResult(null);
+      const message = err instanceof Error ? err.message : 'Terjadi kesalahan saat membuat balasan.';
+      window.alert(message);
     } finally {
       setIsLoading(false);
     }
