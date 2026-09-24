@@ -23,19 +23,14 @@ export async function requestAiReply(payload: GenerateReplyRequestPayload): Prom
       body: JSON.stringify(payload),
     });
 
+    const data = await res.json().catch(() => ({}));
     if (!res.ok) {
-      throw new Error(`HTTP Error: ${res.status}`);
+      throw new Error(data?.error || `Server error (${res.status})`);
     }
-
-    const data = await res.json();
     if (data && data.data && data.data.options && data.data.analysis) {
       return data.data as GenerateReplyResult;
     }
-
-    throw new Error('Format balasan server tidak sesuai');
-  } catch (error) {
-    console.warn('Fallback ke engine client karena:', error);
-    return getLocalClientFallback(payload);
+    throw new Error(data?.error || 'Format balasan server tidak sesuai');
   }
 }
 
