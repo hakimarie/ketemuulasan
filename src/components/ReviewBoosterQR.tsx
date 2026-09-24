@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import QRCode from 'qrcode';
 import { 
   QrCode, 
   Printer, 
@@ -21,6 +22,21 @@ export const ReviewBoosterQR: React.FC = () => {
   const [tableNumber, setTableNumber] = useState('Meja 08');
   const [themeColor, setThemeColor] = useState<'emerald' | 'indigo' | 'amber'>('emerald');
   const [copied, setCopied] = useState(false);
+  const [qrDataUrl, setQrDataUrl] = useState('');
+  const [qrError, setQrError] = useState('');
+
+  useEffect(() => {
+    const value = shortUrl.trim();
+    if (!value) {
+      setQrDataUrl('');
+      setQrError('Masukkan URL tujuan QR code.');
+      return;
+    }
+    QRCode.toDataURL(value, { width: 320, margin: 2, errorCorrectionLevel: 'H', color: { dark: '#0F172A', light: '#FFFFFF' } })
+      .then(setQrDataUrl)
+      .catch(() => { setQrDataUrl(''); setQrError('URL tidak dapat dibuat menjadi QR code.'); });
+    setQrError('');
+  }, [shortUrl]);
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(shortUrl);
@@ -44,8 +60,7 @@ export const ReviewBoosterQR: React.FC = () => {
             Generator QR Code & Standee Meja Ulasan
           </h2>
           <p className="mt-2 text-slate-600 text-sm sm:text-base">
-            Tingkatkan volume ulasan bintang 5 hingga 300%! Buat standee meja akrilik atau stiker kasir ber-QR code 
-            yang langsung membuka form ulasan Google Maps pelanggan dalam 1 detik.
+            Buat standee meja akrilik atau stiker kasir dengan QR code yang langsung membuka halaman ulasan Google Maps pelanggan.
           </p>
         </div>
 
@@ -91,13 +106,13 @@ export const ReviewBoosterQR: React.FC = () => {
 
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Tawaran Insentif / Bonus (Opsional):
+                Pesan Tambahan (Opsional):
               </label>
               <textarea
                 rows={2}
                 value={promoOffer}
                 onChange={(e) => setPromoOffer(e.target.value)}
-                placeholder="Contoh: Beri bintang 5 & dapatkan free dessert..."
+                placeholder="Contoh: Terima kasih sudah meluangkan waktu berbagi pengalaman..."
                 className="w-full text-xs p-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500"
               />
             </div>
@@ -168,7 +183,7 @@ export const ReviewBoosterQR: React.FC = () => {
                 }`}
               >
                 <div className="flex items-center justify-center gap-1 text-[11px] font-bold uppercase tracking-wider">
-                  <MapPin className="w-3.5 h-3.5" /> Official Google Review
+                  <MapPin className="w-3.5 h-3.5" /> Google Review
                 </div>
                 <h4 className="font-extrabold text-base tracking-tight mt-0.5">{businessName}</h4>
               </div>
@@ -184,61 +199,29 @@ export const ReviewBoosterQR: React.FC = () => {
                 Puas dengan Pengalaman Anda Hari Ini?
               </h3>
               <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
-                Dukungan bintang 5 Anda sangat berarti bagi kelangsungan usaha kami!
+                Bagikan pengalaman Anda setelah berkunjung. Masukan Anda membantu kami terus berkembang.
               </p>
 
-              {/* Simulated QR Code Canvas */}
+              {/* Real QR Code */}
               <div className="my-5 inline-block p-4 bg-white rounded-2xl border-2 border-dashed border-slate-300 shadow-inner relative group">
-                <svg
-                  className="w-40 h-40 mx-auto"
-                  viewBox="0 0 100 100"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Top-left corner */}
-                  <rect x="5" y="5" width="28" height="28" rx="4" fill="#0F172A" />
-                  <rect x="11" y="11" width="16" height="16" rx="2" fill="white" />
-                  <rect x="15" y="15" width="8" height="8" rx="1" fill="#0F172A" />
-
-                  {/* Top-right corner */}
-                  <rect x="67" y="5" width="28" height="28" rx="4" fill="#0F172A" />
-                  <rect x="73" y="11" width="16" height="16" rx="2" fill="white" />
-                  <rect x="77" y="15" width="8" height="8" rx="1" fill="#0F172A" />
-
-                  {/* Bottom-left corner */}
-                  <rect x="5" y="67" width="28" height="28" rx="4" fill="#0F172A" />
-                  <rect x="11" y="73" width="16" height="16" rx="2" fill="white" />
-                  <rect x="15" y="77" width="8" height="8" rx="1" fill="#0F172A" />
-
-                  {/* Decorative data blocks */}
-                  <rect x="38" y="8" width="6" height="6" fill="#0F172A" />
-                  <rect x="48" y="12" width="10" height="6" fill="#0F172A" />
-                  <rect x="38" y="24" width="8" height="8" fill="#0F172A" />
-                  <rect x="50" y="28" width="8" height="5" fill="#0F172A" />
-
-                  <rect x="8" y="38" width="6" height="10" fill="#0F172A" />
-                  <rect x="20" y="42" width="12" height="6" fill="#0F172A" />
-                  <rect x="8" y="52" width="10" height="6" fill="#0F172A" />
-
-                  <rect x="38" y="40" width="24" height="20" rx="4" fill="#059669" />
-                  <circle cx="50" cy="50" r="6" fill="white" />
-
-                  <rect x="68" y="38" width="8" height="6" fill="#0F172A" />
-                  <rect x="80" y="44" width="12" height="6" fill="#0F172A" />
-                  <rect x="70" y="52" width="14" height="8" fill="#0F172A" />
-
-                  <rect x="38" y="68" width="8" height="8" fill="#0F172A" />
-                  <rect x="52" y="72" width="8" height="6" fill="#0F172A" />
-                  <rect x="42" y="82" width="18" height="8" fill="#0F172A" />
-                  <rect x="68" y="70" width="12" height="6" fill="#0F172A" />
-                  <rect x="75" y="82" width="16" height="8" fill="#0F172A" />
-                </svg>
-
-                <div className="absolute inset-0 bg-emerald-600/0 hover:bg-emerald-600/10 rounded-2xl flex items-center justify-center transition-all">
-                  <span className="text-[10px] font-bold bg-white text-slate-800 px-2 py-0.5 rounded shadow-xs border border-slate-200">
-                    Scan Kamera HP
-                  </span>
-                </div>
+                {qrDataUrl ? (
+                  <img
+                    src={qrDataUrl}
+                    alt={"QR code ulasan Google Maps untuk " + businessName}
+                    className="w-40 h-40 mx-auto block"
+                  />
+                ) : (
+                  <div className="w-40 h-40 flex items-center justify-center text-center text-xs text-red-600 font-semibold">
+                    {qrError || 'Membuat QR code...'}
+                  </div>
+                )}
+                {qrDataUrl && (
+                  <div className="absolute inset-0 bg-emerald-600/0 hover:bg-emerald-600/10 rounded-2xl flex items-center justify-center transition-all">
+                    <span className="text-[10px] font-bold bg-white text-slate-800 px-2 py-0.5 rounded shadow-xs border border-slate-200">
+                      Scan Kamera HP
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Incentive box */}
