@@ -61,7 +61,7 @@ app.post('/api/generate-reply', async (req, res) => {
       });
     }
 
-    const systemInstruction = `Anda adalah asisten AI profesional untuk BalasUlasan.com, platform manajemen reputasi & auto-reply ulasan Google Bisnisku (Google Business Profile & Google Maps) terdepan di Indonesia.
+    const systemInstruction = `Anda adalah asisten AI profesional untuk KetemuReview, platform manajemen reputasi & auto-reply ulasan Google Bisnisku (Google Business Profile & Google Maps) terdepan di Indonesia.
 Tugas Anda adalah membuat 3 variasi balasan ulasan pelanggan yang sangat kontekstual, manusiawi (bukan terdengar seperti bot kaku), empatik, dan efektif untuk meningkatkan reputasi bisnis serta optimasi Local SEO Google Maps.
 
 Panduan Balasan:
@@ -293,5 +293,5 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Server BalasUlasan running on http://0.0.0.0:${port}`);
+  console.log(`Server KetemuReview running on http://0.0.0.0:${port}`);
 });
