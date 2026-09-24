@@ -26,22 +26,22 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
   return (
     <section className="relative overflow-hidden pt-8 pb-16 md:pt-14 md:pb-24 bg-gradient-to-b from-slate-50 via-white to-slate-50">
       {/* Background ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-tr from-emerald-100/50 via-teal-100/30 to-indigo-100/40 blur-3xl -z-10 rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-tr from-blue-100/50 via-green-100/30 to-blue-100/40 blur-3xl -z-10 rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           {/* Top Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs sm:text-sm font-semibold mb-6 shadow-xs">
-            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE]/80 text-[#1D4ED8] text-xs sm:text-sm font-semibold mb-6 shadow-xs">
+            <span className="flex h-2 w-2 rounded-full bg-[#EFF6FF]0 animate-pulse" />
             <span>Kloning Resmi & Platform Reputasi Bisnis Indonesia</span>
-            <span className="text-emerald-400">|</span>
-            <span className="font-bold text-emerald-700">ketemureview</span>
+            <span className="text-blue-400">|</span>
+            <span className="font-bold text-[#2563EB]">ketemureview</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#0F172A] tracking-tight leading-[1.12]">
             Kelola & Balas Ulasan Google Maps & Bisnis{' '}
-            <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent">
               10x Lebih Cepat
             </span>{' '}
             dengan AI Cerdas
@@ -58,9 +58,9 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <button
               onClick={onTryGenerator}
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 hover:shadow-emerald-600/40 transition-all flex items-center justify-center gap-2 group hover:-translate-y-0.5"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/40 transition-all flex items-center justify-center gap-2 group hover:-translate-y-0.5"
             >
-              <Sparkles className="w-4 h-4 text-emerald-200 group-hover:rotate-12 transition-transform" />
+              <Sparkles className="w-4 h-4 text-blue-200 group-hover:rotate-12 transition-transform" />
               Coba Live Generator Reply (Gratis)
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
               onClick={onOpenDashboard}
               className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-slate-300 shadow-xs hover:border-slate-400 transition-all flex items-center justify-center gap-2"
             >
-              <Building2 className="w-4 h-4 text-emerald-600" />
+              <Building2 className="w-4 h-4 text-[#2563EB]" />
               Simulasi Inbox Google Profil Bisnis
             </button>
           </div>
@@ -77,13 +77,13 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
           {/* Mini trust checklist */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-slate-500">
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Resmi Terintegrasi Google Business
+              <CheckCircle2 className="w-4 h-4 text-[#2563EB]" /> Resmi Terintegrasi Google Business
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" /> 100% Bahasa Indonesia & Santun
+              <CheckCircle2 className="w-4 h-4 text-[#2563EB]" /> 100% Bahasa Indonesia & Santun
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Anti-Bot Kaku (Kontekstual Penuh)
+              <CheckCircle2 className="w-4 h-4 text-[#2563EB]" /> Anti-Bot Kaku (Kontekstual Penuh)
             </span>
           </div>
         </div>
@@ -92,16 +92,16 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
         <div className="mt-12 max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden">
             {/* Top Bar of the Mock Window */}
-            <div className="bg-slate-900 text-slate-200 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+            <div className="bg-[#0F172A] text-slate-200 px-4 py-3 flex items-center justify-between border-b border-[#0F172A]">
               <div className="flex items-center gap-2">
                 <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-[#EFF6FF]0/80" />
+                  <div className="w-3 h-3 rounded-full bg-[#ECFDF3]0/80" />
+                  <div className="w-3 h-3 rounded-full bg-[#EFF6FF]0/80" />
                 </div>
                 <div className="ml-3 flex items-center gap-1.5 text-xs text-slate-300 font-medium">
-                  <MapPin className="w-3.5 h-3.5 text-red-400" />
-                  Google Maps Review Management • <span className="text-emerald-400 font-semibold">Kopi Ruang Senja, Senopati</span>
+                  <MapPin className="w-3.5 h-3.5 text-blue-400" />
+                  Google Maps Review Management • <span className="text-blue-400 font-semibold">Kopi Ruang Senja, Senopati</span>
                 </div>
               </div>
 
@@ -121,11 +121,11 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
                   onClick={() => setInteractiveMode('after')}
                   className={`px-3 py-1 rounded-md transition-all flex items-center gap-1 ${
                     interactiveMode === 'after'
-                      ? 'bg-emerald-600 text-white font-semibold shadow-xs'
+                      ? 'bg-[#2563EB] text-white font-semibold shadow-xs'
                       : 'text-slate-400 hover:text-slate-200'
                   }`}
                 >
-                  <Sparkles className="w-3 h-3 text-emerald-200" />
+                  <Sparkles className="w-3 h-3 text-blue-200" />
                   Dengan KetemuReview
                 </button>
               </div>
@@ -140,17 +140,17 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
                     <img
                       src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
                       alt="Reviewer"
-                      className="w-11 h-11 rounded-full object-cover ring-2 ring-emerald-500/20"
+                      className="w-11 h-11 rounded-full object-cover ring-2 ring-blue-500/20"
                     />
                     <div>
                       <div className="flex items-center gap-2">
-                        <h4 className="font-bold text-slate-900 text-sm sm:text-base">Anissa Putri Kinanti</h4>
+                        <h4 className="font-bold text-[#0F172A] text-sm sm:text-base">Anissa Putri Kinanti</h4>
                         <span className="text-[11px] px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded font-medium">Local Guide • Level 6</span>
                       </div>
                       <div className="flex items-center gap-2 mt-0.5">
-                        <div className="flex text-amber-400">
+                        <div className="flex text-green-400">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-amber-400" />
+                            <Star key={i} className="w-4 h-4 fill-green-400" />
                           ))}
                         </div>
                         <span className="text-xs text-slate-400">2 hari lalu</span>
@@ -158,7 +158,7 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
                     </div>
                   </div>
 
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 hidden sm:inline-flex items-center gap-1">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE]/60 hidden sm:inline-flex items-center gap-1">
                     <ThumbsUp className="w-3 h-3" /> Sangat Puas
                   </span>
                 </div>
@@ -171,16 +171,16 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
 
                 {/* Response area based on mode */}
                 {interactiveMode === 'after' ? (
-                  <div className="mt-5 pl-4 sm:pl-6 border-l-2 border-emerald-500 bg-emerald-50/50 rounded-r-xl p-4 transition-all animate-in fade-in duration-300">
+                  <div className="mt-5 pl-4 sm:pl-6 border-l-2 border-blue-500 bg-[#EFF6FF]/50 rounded-r-xl p-4 transition-all animate-in fade-in duration-300">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">
+                        <div className="w-6 h-6 rounded-full bg-[#2563EB] text-white flex items-center justify-center text-xs font-bold">
                           K
                         </div>
                         <div>
-                          <span className="font-bold text-xs text-slate-900">Respon dari Pemilik (Kopi Ruang Senja)</span>
-                          <span className="ml-2 text-[10px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full inline-flex items-center gap-1">
-                            <Sparkles className="w-2.5 h-2.5 text-emerald-600" /> Dibalas AI dalam 3 menit
+                          <span className="font-bold text-xs text-[#0F172A]">Respon dari Pemilik (Kopi Ruang Senja)</span>
+                          <span className="ml-2 text-[10px] bg-blue-100 text-[#1D4ED8] font-semibold px-2 py-0.5 rounded-full inline-flex items-center gap-1">
+                            <Sparkles className="w-2.5 h-2.5 text-[#2563EB]" /> Dibalas AI dalam 3 menit
                           </span>
                         </div>
                       </div>
@@ -188,24 +188,24 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
                     </div>
 
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      "Halo Kak Anissa Putri Kinanti, terima kasih banyak telah berkunjung dan memberikan ulasan bintang 5 yang manis untuk <strong className="text-slate-900">Kopi Ruang Senja Senopati</strong>! Senang sekali mendengar Kakak menyukai kopi gula aren dan croissant salted egg kami yang baru dipanggang fresh setiap pagi. Seluruh tim barista kami sangat bersemangat membaca apresiasi Kakak. Jangan sungkan mampir lagi ya Kak, kami selalu siap menyambut kedatangan berikutnya dengan menu-menu istimewa lainnya! Salam hangat dari kami ✨☕"
+                      "Halo Kak Anissa Putri Kinanti, terima kasih banyak telah berkunjung dan memberikan ulasan bintang 5 yang manis untuk <strong className="text-[#0F172A]">Kopi Ruang Senja Senopati</strong>! Senang sekali mendengar Kakak menyukai kopi gula aren dan croissant salted egg kami yang baru dipanggang fresh setiap pagi. Seluruh tim barista kami sangat bersemangat membaca apresiasi Kakak. Jangan sungkan mampir lagi ya Kak, kami selalu siap menyambut kedatangan berikutnya dengan menu-menu istimewa lainnya! Salam hangat dari kami ✨☕"
                     </p>
 
-                    <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-emerald-800">
-                      <span className="bg-white/80 border border-emerald-200/80 px-2 py-0.5 rounded">
+                    <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-[#1D4ED8]">
+                      <span className="bg-white/80 border border-[#BFDBFE]/80 px-2 py-0.5 rounded">
                         ✓ Mention Brand & Lokasi (SEO Naik)
                       </span>
-                      <span className="bg-white/80 border border-emerald-200/80 px-2 py-0.5 rounded">
+                      <span className="bg-white/80 border border-[#BFDBFE]/80 px-2 py-0.5 rounded">
                         ✓ Spesifik membalas croissant & kopi aren
                       </span>
-                      <span className="bg-white/80 border border-emerald-200/80 px-2 py-0.5 rounded">
+                      <span className="bg-white/80 border border-[#BFDBFE]/80 px-2 py-0.5 rounded">
                         ✓ Nada Ramah & Hangat
                       </span>
                     </div>
                   </div>
                 ) : (
-                  <div className="mt-5 pl-4 sm:pl-6 border-l-2 border-red-300 bg-red-50/50 rounded-r-xl p-4 transition-all">
-                    <div className="flex items-center gap-2 text-red-700 font-semibold text-xs mb-1">
+                  <div className="mt-5 pl-4 sm:pl-6 border-l-2 border-blue-300 bg-[#EFF6FF]/50 rounded-r-xl p-4 transition-all">
+                    <div className="flex items-center gap-2 text-[#2563EB] font-semibold text-xs mb-1">
                       <Clock className="w-4 h-4" /> Belum Dibalas (Sudah 2 Hari Dibiarkan)
                     </div>
                     <p className="text-xs text-slate-500 leading-relaxed">
@@ -220,12 +220,12 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
             {/* Bottom summary bar */}
             <div className="bg-white px-5 py-3.5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-2 text-slate-600 font-medium">
-                <Zap className="w-4 h-4 text-amber-500" />
+                <Zap className="w-4 h-4 text-green-500" />
                 <span>Auto-Pilot aktif memantau ulasan baru 24/7 di Google Maps</span>
               </div>
               <button
                 onClick={onTryGenerator}
-                className="text-emerald-600 hover:text-emerald-700 font-bold inline-flex items-center gap-1 text-xs"
+                className="text-[#2563EB] hover:text-[#2563EB] font-bold inline-flex items-center gap-1 text-xs"
               >
                 Hasilkan balasan untuk bisnis Anda sekarang <CornerDownRight className="w-3.5 h-3.5" />
               </button>
@@ -236,24 +236,24 @@ export const Hero: React.FC<HeroProps> = ({ onTryGenerator, onOpenDashboard }) =
         {/* Stats Row */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
           <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs text-center">
-            <div className="text-3xl font-black text-slate-900 tracking-tight">1.500+</div>
+            <div className="text-3xl font-black text-[#0F172A] tracking-tight">1.500+</div>
             <div className="text-xs font-semibold text-slate-500 mt-1">Bisnis & Outlet Aktif</div>
-            <div className="text-[11px] text-emerald-600 font-medium mt-0.5">di 34 Kota Indonesia</div>
+            <div className="text-[11px] text-[#2563EB] font-medium mt-0.5">di 34 Kota Indonesia</div>
           </div>
           <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs text-center">
-            <div className="text-3xl font-black text-slate-900 tracking-tight">450.000+</div>
+            <div className="text-3xl font-black text-[#0F172A] tracking-tight">450.000+</div>
             <div className="text-xs font-semibold text-slate-500 mt-1">Ulasan Dibalas Sukses</div>
-            <div className="text-[11px] text-emerald-600 font-medium mt-0.5">Bintang 1 hingga 5</div>
+            <div className="text-[11px] text-[#2563EB] font-medium mt-0.5">Bintang 1 hingga 5</div>
           </div>
           <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs text-center">
-            <div className="text-3xl font-black text-slate-900 tracking-tight">90%</div>
+            <div className="text-3xl font-black text-[#0F172A] tracking-tight">90%</div>
             <div className="text-xs font-semibold text-slate-500 mt-1">Waktu Kerja Dihemat</div>
-            <div className="text-[11px] text-emerald-600 font-medium mt-0.5">Tanpa ngetik manual</div>
+            <div className="text-[11px] text-[#2563EB] font-medium mt-0.5">Tanpa ngetik manual</div>
           </div>
           <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs text-center">
-            <div className="text-3xl font-black text-slate-900 tracking-tight">+0.5★</div>
+            <div className="text-3xl font-black text-[#0F172A] tracking-tight">+0.5★</div>
             <div className="text-xs font-semibold text-slate-500 mt-1">Rata-Rata Kenaikan Rating</div>
-            <div className="text-[11px] text-emerald-600 font-medium mt-0.5">Dalam 60 hari pertama</div>
+            <div className="text-[11px] text-[#2563EB] font-medium mt-0.5">Dalam 60 hari pertama</div>
           </div>
         </div>
       </div>
