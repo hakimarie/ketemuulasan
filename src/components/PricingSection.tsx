@@ -252,7 +252,7 @@ export const PricingSection: React.FC = () => {
                       </label>
                       <input
                         type="text"
-                        requiblue
+                        required
                         placeholder="Contoh: Arie Hakim"
                         className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500"
                       />
@@ -264,7 +264,7 @@ export const PricingSection: React.FC = () => {
                       </label>
                       <input
                         type="email"
-                        requiblue
+                        required
                         value={emailInput}
                         onChange={(e) => setEmailInput(e.target.value)}
                         placeholder="email@bisnisanda.com"
@@ -278,7 +278,7 @@ export const PricingSection: React.FC = () => {
                       </label>
                       <input
                         type="tel"
-                        requiblue
+                        required
                         placeholder="0812-xxxx-xxxx"
                         className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500"
                       />
