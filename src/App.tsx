@@ -64,7 +64,7 @@ export default function App() {
       status: 'replied',
       replyText,
       repliedAt: 'Baru saja',
-      repliedBy: 'BalasUlasan AI Studio',
+      repliedBy: 'KetemuReview',
       sentiment: rating >= 4 ? 'positive' : rating <= 2 ? 'negative' : 'neutral',
       tags: ['Dibalas di Generator'],
     };
