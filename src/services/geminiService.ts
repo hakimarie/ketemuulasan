@@ -31,6 +31,8 @@ export async function requestAiReply(payload: GenerateReplyRequestPayload): Prom
       return data.data as GenerateReplyResult;
     }
     throw new Error(data?.error || 'Format balasan server tidak sesuai');
+  } catch (error) {
+    throw error instanceof Error ? error : new Error('Gagal menghubungi layanan AI.');
   }
 }
 
