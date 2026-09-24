@@ -143,14 +143,12 @@ export const PricingSection: React.FC = () => {
                     <span
                       className={`text-xs font-extrabold px-3 py-1 rounded-full ${
                         plan.popular
-                          ? 'bg-[#EFF6FF]0 text-[#0F172A] font-black'
+                          ? 'bg-[#EFF6FF] text-[#0F172A] font-black'
                           : 'bg-slate-100 text-slate-700'
                       }`}
                     >
                       {plan.badge}
                     </span>
-                    {billingCycle === 'annual' && (
-                              )}
                   </div>
 
                   <h3 className={`text-2xl font-black ${plan.popular ? 'text-white' : 'text-[#0F172A]'}`}>
