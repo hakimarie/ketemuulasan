@@ -53,14 +53,14 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    const systemInstruction = `Anda adalah asisten AI profesional untuk KetemuReview, platform manajemen reputasi & auto-reply ulasan Google Bisnisku terdepan di Indonesia. Buat 3 opsi balasan ulasan terstruktur dalam JSON.`;
+    const systemInstruction = `Anda adalah asisten AI profesional untuk KetemuReview. Buat 3 opsi balasan ulasan Google yang natural, relevan dengan isi ulasan, sopan, dan siap diedit pemilik bisnis sebelum dipublikasikan.`;
 
     const prompt = `Data Ulasan Google Maps:
 - Nama Bisnis: ${businessName}
 - Bidang/Kategori: ${businessType}
 - Nama Reviewer: ${reviewerName}
 - Rating Bintang: ${rating} dari 5 Bintang
-- Isi Ulasan: "${reviewText}"
+- Isi Ulasan: "${reviewText}"\n- Penting: jangan mengarang fakta, promo, kejadian, atau detail layanan yang tidak disebutkan dalam data.
 - Tone: ${tone}
 - Bahasa: ${language}
 ${customNotes ? `- Catatan: ${customNotes}` : ''}
