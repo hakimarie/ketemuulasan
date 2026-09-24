@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="font-extrabold text-xl tracking-tight text-slate-900">
-                    Balas<span className="text-emerald-600">Ulasan</span>
+                    Ketemu<span className="text-emerald-600">Review</span>
                   </span>
                   <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200/60">
                     AI PRO
