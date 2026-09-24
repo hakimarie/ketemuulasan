@@ -13,7 +13,7 @@ export const PricingSection: React.FC = () => {
       name: 'UMKM Starter',
       tagline: 'Cocok untuk 1 kafe, salon, atau toko baru',
       monthlyPrice: 99000,
-      annualMonthlyPrice: 79000,
+      annualMonthlyPrice: 99000,
       popular: false,
       badge: 'Pemula',
       features: [
@@ -31,7 +31,7 @@ export const PricingSection: React.FC = () => {
       name: 'Bisnis Pro',
       tagline: 'Pilihan paling populer bagi pemilik bisnis berkembang',
       monthlyPrice: 199000,
-      annualMonthlyPrice: 159000,
+      annualMonthlyPrice: 199000,
       popular: true,
       badge: 'Paling Populer',
       features: [
@@ -50,7 +50,7 @@ export const PricingSection: React.FC = () => {
       name: 'Multi-Cabang Enterprise',
       tagline: 'Untuk waralaba, grup restoran & klinik multi-kota',
       monthlyPrice: 499000,
-      annualMonthlyPrice: 399000,
+      annualMonthlyPrice: 499000,
       popular: false,
       badge: 'Perusahaan',
       features: [
